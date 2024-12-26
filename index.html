@@ -1,8 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-
-
-
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfolio</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <nav>
+            <div class="nav-content">
+                <div class="logo">Rashida Leslie</div>
+                <div class="nav-links">
+                    <a href="./Portfolio/index.html">Portfolio</a>
+                    <a href="./About Me/index.html">About</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+        </nav>
+    
+        <section class="hero">
+            <div class="hero-content">
+                <div class="animated-text">
+                    <h1>
+                        <span class="text-reveal">Creative</span>
+                        <br>
+                        <span class="text-reveal">Portfolio</span>
+                    </h1>
+                </div>
+                <div class="subtitle text-reveal-delayed">Architecture & Urbanism</div>
+                <div class="scroll-indicator">
+                    <div class="mouse">
+                        <div class="wheel"></div>
+                    </div>
+                    <div class="arrow"></div>
+                </div>
+            </div>
+            <div class="cursor-follower"></div>
+            <canvas id="noiseCanvas"></canvas>
+        </section>
+    
+        <section id="portfolio" class="portfolio">
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <img src="/api/placeholder/600/600" alt="Portfolio work">
+                </div>
+                <div class="portfolio-item">
+                    <img src="/api/placeholder/600/600" alt="Portfolio work">
+                </div>
+                <div class="portfolio-item">
+                    <img src="/api/placeholder/600/600" alt="Portfolio work">
+                </div>
+                <!-- Add more portfolio items as needed -->
+            </div>
+        </section>
+    
+      
+    
+        <section id="contact" class="contact">
+            <div class="contact-content">
+                <h2>Get in Touch</h2>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/rashida-leslie-3ba862179"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/Rashida-Leslie/"><i class="fab fa-github"></i></a>
+                    <a href="https://www.instagram.com/rashida.arch/"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="far fa-envelope"></i></a>
+                </div>
+            </div>
+        </section>
+    
+        <script src="script.js"></script>
+    </body>
 
 
 </html>
