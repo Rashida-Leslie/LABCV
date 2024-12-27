@@ -1,5 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Space+Grotesk:wght@300;400;600&display=swap');
 
+/* 
+Things to remember 
+
+Root: It is used to define global variables that can be accessed throughout your CSS, ensuring consistency and maintainability in your design
+Rem:  is a relative unit based on the font size of the root element 
+Section: implies that the content within it is thematically related and forms a distinct section of the document.
+
+*/
+
+
+
+
 :root {
     --beige: #F5F5DC;
     --sage: #9CAF88;
@@ -69,6 +81,7 @@ h1 {
     margin-bottom: 1rem;
 }
 
+
 .subtitle {
     font-size: 1.5rem;
     color: var(--sage);
@@ -106,14 +119,34 @@ h1 {
 }
 
 .about {
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    gap: 2rem; 
     padding: 4rem 2rem;
+    padding-top: 8rem; 
     background-color: var(--sage);
     color: white;
 }
 
+.about-image {
+    flex: 1; 
+   
+}
+
+.about-image img {
+    width: 100%; 
+    height: auto; 
+    border-radius: 8px; /*rounded corners */
+}
+
 .about-content {
+    flex: 2; /* Make the content take up more space relative to the image */
     max-width: 800px;
-    margin: 0 auto;
+}
+
+p {
+    margin-bottom: 1.5rem; 
 }
 
 .contact {
@@ -202,8 +235,7 @@ h1 {
 }
 
 .cursor-follower {
-    position: fixed;
-    width: 20px;
+    width: 20px; /* Ensure matches offset in JavaScript */
     height: 20px;
     background: var(--sage);
     border-radius: 50%;
@@ -267,4 +299,118 @@ h1 {
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 0.7; }
+}
+
+/*CODE FOR TIMELINE*/
+
+.timeline {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    position: relative;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #e0e0e0;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.timeline-container {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 2;
+}
+
+.timeline-item {
+    flex: 0 1 calc(16.666% - 20px);
+    position: relative;
+    padding: 10px;
+}
+
+.timeline-item:nth-child(even) {
+    margin-top: 100px;
+}
+
+.timeline-item:nth-child(odd) {
+    margin-bottom: 100px;
+}
+
+.timeline-dot {
+    width: 20px;
+    height: 20px;
+    background: var(--sage);
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.timeline-item:nth-child(odd) .timeline-dot {
+    bottom: -60px;
+}
+
+.timeline-item:nth-child(even) .timeline-dot {
+    top: -60px;
+}
+
+.timeline-content {
+    background: #f8fafc;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.timeline-date {
+    color: #64748b;
+    font-size: 0.875rem;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.timeline-title {
+    color: #1e293b;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.timeline-description {
+    color: #475569;
+    font-size: 0.875rem;
+    line-height: 1.4;
+}
+
+.timeline-item:hover .timeline-content {
+    transform: translateY(-5px);
+}
+
+.timeline-item:hover .timeline-dot {
+    transform: translateX(-50%) scale(1.2);
+}
+
+@media (max-width: 768px) {
+    .timeline-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .timeline-item {
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    .timeline-item:nth-child(even),
+    .timeline-item:nth-child(odd) {
+        margin: 20px 0;
+    }
 }

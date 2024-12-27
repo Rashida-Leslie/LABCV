@@ -7,23 +7,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Navbar background opacity on scroll
-window.addEventListener('scroll', () => {
-    const nav = document.querySelector('nav');
-    if (window.scrollY > 50) {
-        nav.style.backgroundColor = 'rgba(245, 245, 220, 0.98)';
-    } else {
-        nav.style.backgroundColor = 'rgba(245, 245, 220, 0.95)';
-    }
-});
-
-
-// Cursor Follower
-const cursor = document.querySelector('.cursor-follower');
-
-document.addEventListener('mousemove', (e) => {
-    cursor.style.transform = `translate(${e.clientX - 10}px, ${e.clientY - 10}px)`;
-});
 
 // Intersection Observer for Scroll Animations
 const observerOptions = {
