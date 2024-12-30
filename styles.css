@@ -145,6 +145,39 @@ h1 {
     max-width: 800px;
 }
 
+.resume-section {
+    padding: 4rem 2rem;
+    background-color: var(--beige);
+}
+
+.resume-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.resume-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.resume-btn {
+    padding: 1rem 2rem;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1rem;
+    background-color: var(--sage);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
 p {
     margin-bottom: 1.5rem; 
 }

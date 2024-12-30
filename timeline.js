@@ -1,12 +1,12 @@
 const timelineData = [
     {
-        date: '2019',
-        title: 'Foundation',
-        description: 'Company established'
+        date: '2022',
+        title: 'Graduated from the University of Toronto',
+        description: 'Bachelor of Arts in Architecture'
     },
     {
-        date: '2020',
-        title: 'Growth',
+        date: '2022-2024',
+        title: 'Worked at A & Architects',
         description: 'Expanded to new markets'
     },
     {
@@ -26,8 +26,8 @@ const timelineData = [
     },
     {
         date: '2024',
-        title: 'Future',
-        description: 'Setting new goals'
+        title: 'Started at Carleton University',
+        description: 'Working towards a M.Arch'
     }
 ];
 
